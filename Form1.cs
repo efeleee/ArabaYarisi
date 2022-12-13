@@ -21,6 +21,8 @@ namespace ArabaYarisi
             InitializeComponent();
         }
 
+
+
         private void button6_Click(object sender, EventArgs e)
         {
             timer1.Start();
@@ -55,23 +57,24 @@ namespace ArabaYarisi
                     butonTuruncuNitro.Enabled = false;
                     butonYesilNitro.Enabled = false;
                     butonMaviTurbo.Enabled = false;
+                    button7.Enabled = true;
                     Class1.turuncuwin = 1;
                     if (Class1.mavisec == 1)
                     {
                         label2.ForeColor = Color.Red;
-                        label2.Text = "Bahisi kaybettin.\nSeçtiğin Araba: Mavi\nKaybettiğin Bütçe:" + Class1.butce;
+                        label2.Text = "Bahisi kaybettin.\nSeçtiğin Araba: Mavi\nKaybettiğin Bütçe:" + Class1.butce + "₺";
                         Class1.kaybedilenpara = Class1.butce;
                     }
                     if (Class1.yesilsec == 1)
                     {
                         label2.ForeColor = Color.Red;
-                        label2.Text = "Bahisi kaybettin.\nSeçtiğin Araba: Yeşil\nKaybettiğin Bütçe:" + Class1.butce;
+                        label2.Text = "Bahisi kaybettin.\nSeçtiğin Araba: Yeşil\nKaybettiğin Bütçe:" + Class1.butce + "₺";
                         Class1.kaybedilenpara = Class1.butce;
                     }
                     if (Class1.turuncusec == 1)
                     {
                         label2.ForeColor = Color.Green;
-                        label2.Text = "Bahisi Kazandın!\nSeçtiğin Araba: Turuncu\nKazandığın Bütçe:" + Class1.butce * 2;
+                        label2.Text = "Bahisi Kazandın!\nSeçtiğin Araba: Turuncu\nKazandığın Bütçe:" + Class1.butce * 2 + "₺";
                         Class1.kazanilanpara = Class1.butce * 2;
                     }
                 }
@@ -93,23 +96,24 @@ namespace ArabaYarisi
                     butonTuruncuNitro.Enabled = false;
                     butonYesilNitro.Enabled = false;
                     butonMaviTurbo.Enabled = false;
+                    button7.Enabled = true;
                     Class1.yesilwin = 1;
                     if (Class1.mavisec == 1)
                     {
                         label2.ForeColor = Color.Red;
-                        label2.Text = "Bahisi kaybettin.\nSeçtiğin Araba: Mavi\nKaybettiğin Bütçe:" + Class1.butce;
+                        label2.Text = "Bahisi kaybettin.\nSeçtiğin Araba: Mavi\nKaybettiğin Bütçe:" + Class1.butce + "₺";
                         Class1.kaybedilenpara = Class1.butce;
                     }
                     if (Class1.turuncusec == 1)
                     {
                         label2.ForeColor = Color.Red;
-                        label2.Text = "Bahisi kaybettin.\nSeçtiğin Araba: Turuncu\nKaybettiğin Bütçe:" + Class1.butce;
+                        label2.Text = "Bahisi kaybettin.\nSeçtiğin Araba: Turuncu\nKaybettiğin Bütçe:" + Class1.butce + "₺";
                         Class1.kaybedilenpara = Class1.butce;
                     }
                     if (Class1.yesilsec == 1)
                     {
                         label2.ForeColor = Color.Green;
-                        label2.Text = "Bahisi Kazandın!\nSeçtiğin Araba: Yeşil\nKazandığın Bütçe:" + Class1.butce * 2;
+                        label2.Text = "Bahisi Kazandın!\nSeçtiğin Araba: Yeşil\nKazandığın Bütçe:" + Class1.butce * 2 + "₺";
                         Class1.kazanilanpara = Class1.butce * 2;
                     }
                 }
@@ -131,23 +135,24 @@ namespace ArabaYarisi
                     butonTuruncuNitro.Enabled = false;
                     butonYesilNitro.Enabled = false;
                     butonMaviTurbo.Enabled = false;
+                    button7.Enabled = true;
                     Class1.maviwin= 1;
                     if (Class1.turuncusec == 1)
                     {
                         label2.ForeColor= Color.Red;
-                        label2.Text = "Bahisi kaybettin.\nSeçtiğin Araba: Turuncu\nKaybettiğin Bütçe:" + Class1.butce;
+                        label2.Text = "Bahisi kaybettin.\nSeçtiğin Araba: Turuncu\nKaybettiğin Bütçe:" + Class1.butce + "₺";
                         Class1.kaybedilenpara = Class1.butce;
                     }
                     if (Class1.yesilsec == 1)
                     {
                         label2.ForeColor = Color.Red;
-                        label2.Text = "Bahisi kaybettin.\nSeçtiğin Araba: Yeşil\nKaybettiğin Bütçe:" + Class1.butce;
+                        label2.Text = "Bahisi kaybettin.\nSeçtiğin Araba: Yeşil\nKaybettiğin Bütçe:" + Class1.butce + "₺";
                         Class1.kaybedilenpara = Class1.butce;
                     }
                     if (Class1.mavisec == 1)
                     {
                         label2.ForeColor = Color.Green;
-                        label2.Text = "Bahisi Kazandın!\nSeçtiğin Araba: Mavi\nKazandığın Bütçe:" + Class1.butce * 2;
+                        label2.Text = "Bahisi Kazandın!\nSeçtiğin Araba: Mavi\nKazandığın Bütçe:" + Class1.butce * 2 + "₺";
                         Class1.kazanilanpara = Class1.butce * 2;
                     }
                 }
@@ -205,6 +210,7 @@ namespace ArabaYarisi
             butonTuruncuNitro.Enabled = false;
             butonYesilNitro.Enabled = false;
             butonMaviTurbo.Enabled = false;
+            button7.Enabled = false;
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -321,6 +327,42 @@ namespace ArabaYarisi
         {
             c = x.Next(3, 10);
             pictureBox3.Left += c;
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            butonTuruncuNitro.Enabled = false;
+            butonYesilNitro.Enabled = false;
+            butonMaviTurbo.Enabled = false;
+            button6.Enabled = true;
+            button7.Enabled = false;
+            turuncuNitroBar.Value = 0;
+            yesilNitroBar.Value = 0;
+            maviNitroBar.Value = 0;
+            timer1.Stop();
+            timer2.Stop();
+            timer3.Stop();
+            timer4.Stop();
+            timerTuruncu.Stop();
+            timerYesil.Stop();
+            timerMavi.Stop();
+            pictureBox1.Location = new Point(109, 105);
+            pictureBox2.Location = new Point(109, 250);
+            pictureBox3.Location = new Point(109, 403);
+            label2.ForeColor = Color.White;
+            label2.Text = "Yarışı Başlat!";
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 f2 = new Form2();
+            f2.Show();
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -36,5 +36,10 @@ namespace ArabaYarisi
             linkLabel2.LinkVisited = true;
             System.Diagnostics.Process.Start("https://github.com/efeleee");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

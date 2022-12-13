@@ -57,21 +57,49 @@ namespace ArabaYarisi
             }
         }
 
+        private void Bahis_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form1 f1 = new Form1();
+            if(Class1.turuncusec == 1)
+            {
+                f1.label2.Text = "Yatırdığınız Araba:" + "Turuncu\nYatırdığınız Miktar:" + Class1.butce +"\nAraba kazanırsa alacağınız miktar:" + Class1.butce * 2 + "₺";
+                f1.Controls.Clear();
+                f1.InitializeComponent();
+            }
+            if (Class1.mavisec == 1)
+            {
+                f1.label2.Text = "Yatırdığınız Araba:" + "Mavi\nYatırdığınız Miktar:" + Class1.butce + "\nAraba kazanırsa alacağınız miktar:" + Class1.butce * 2 + "₺";
+                f1.Controls.Clear();
+                f1.InitializeComponent();
+            }
+            if (Class1.yesilsec == 1)
+            {
+                f1.label2.Text = "Yatırdığınız Araba:" + "Yeşil\nYatırdığınız Miktar:" + Class1.butce + "\nAraba kazanırsa alacağınız miktar:" + Class1.butce * 2 + "₺";
+                f1.Controls.Clear();
+                f1.InitializeComponent();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             int a = Convert.ToInt32(textBox1.Text);
             yatirilanpara = a;
-            label2.Text = "Miktar :" + b;
+            label2.Text = "Miktar :" + b + "₺";
             b = b - yatirilanpara;
-            label2.Text = "Miktar :" + b;
+            label2.Text = "Miktar :" + b + "₺";
             Class1.butce = yatirilanpara;
             Class1.kalanpara = b;
         }
 
         private void Bahis_Load(object sender, EventArgs e)
         {
-            b = Class1.kalanpara - Class1.kaybedilenpara + Class1.kazanilanpara;
-            label2.Text = "Miktar :" + b.ToString();
+            b = Class1.kalanpara + Class1.kazanilanpara;
+            label2.Text = "Miktar :" + b.ToString() + "₺";
         }
     }
 }
