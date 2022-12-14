@@ -1,0 +1,14 @@
+C:\Users\Efe\source\repos\ArabaYarisi\bin\Debug\ArabaYarisi.exe.config
+C:\Users\Efe\source\repos\ArabaYarisi\bin\Debug\ArabaYarisi.exe
+C:\Users\Efe\source\repos\ArabaYarisi\bin\Debug\ArabaYarisi.pdb
+C:\Users\Efe\source\repos\ArabaYarisi\obj\Debug\ArabaYarisi.csproj.AssemblyReference.cache
+C:\Users\Efe\source\repos\ArabaYarisi\obj\Debug\ArabaYarisi.csproj.SuggestedBindingRedirects.cache
+C:\Users\Efe\source\repos\ArabaYarisi\obj\Debug\ArabaYarisi.Form1.resources
+C:\Users\Efe\source\repos\ArabaYarisi\obj\Debug\ArabaYarisi.Properties.Resources.resources
+C:\Users\Efe\source\repos\ArabaYarisi\obj\Debug\ArabaYarisi.csproj.GenerateResource.cache
+C:\Users\Efe\source\repos\ArabaYarisi\obj\Debug\ArabaYarisi.csproj.CoreCompileInputs.cache
+C:\Users\Efe\source\repos\ArabaYarisi\obj\Debug\ArabaYarisi.exe
+C:\Users\Efe\source\repos\ArabaYarisi\obj\Debug\ArabaYarisi.pdb
+C:\Users\Efe\source\repos\ArabaYarisi\obj\Debug\ArabaYarisi.Bahis.resources
+C:\Users\Efe\source\repos\ArabaYarisi\obj\Debug\ArabaYarisi.Form2.resources
+C:\Users\Efe\source\repos\ArabaYarisi\obj\Debug\ArabaYarisi.Form3.resources
