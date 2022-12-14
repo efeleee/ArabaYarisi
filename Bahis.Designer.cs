@@ -78,7 +78,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 3;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label1
             // 
@@ -138,7 +137,6 @@
             this.Name = "Bahis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bahis";
-            this.Deactivate += new System.EventHandler(this.Bahis_Deactivate);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Bahis_FormClosed);
             this.Load += new System.EventHandler(this.Bahis_Load);
             this.ResumeLayout(false);

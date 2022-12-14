@@ -49,15 +49,15 @@
             this.turuncuNitroBar = new System.Windows.Forms.ProgressBar();
             this.yesilNitroBar = new System.Windows.Forms.ProgressBar();
             this.maviNitroBar = new System.Windows.Forms.ProgressBar();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timerTuruncu = new System.Windows.Forms.Timer(this.components);
             this.timerYesil = new System.Windows.Forms.Timer(this.components);
             this.timerMavi = new System.Windows.Forms.Timer(this.components);
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.timer5 = new System.Windows.Forms.Timer(this.components);
-            this.button11 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -131,6 +131,7 @@
             this.button3.Size = new System.Drawing.Size(1238, 67);
             this.button3.TabIndex = 5;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button6
             // 
@@ -176,7 +177,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(812, 9);
+            this.label1.Location = new System.Drawing.Point(865, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(187, 31);
             this.label1.TabIndex = 10;
@@ -184,58 +185,42 @@
             // 
             // butonTuruncuNitro
             // 
-            this.butonTuruncuNitro.BackColor = System.Drawing.Color.Transparent;
-            this.butonTuruncuNitro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butonTuruncuNitro.BackgroundImage")));
-            this.butonTuruncuNitro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butonTuruncuNitro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butonTuruncuNitro.Location = new System.Drawing.Point(330, 573);
             this.butonTuruncuNitro.Name = "butonTuruncuNitro";
             this.butonTuruncuNitro.Size = new System.Drawing.Size(163, 80);
             this.butonTuruncuNitro.TabIndex = 11;
-            this.butonTuruncuNitro.UseVisualStyleBackColor = false;
-            this.butonTuruncuNitro.Click += new System.EventHandler(this.butonTuruncuNitro_Click);
-            this.butonTuruncuNitro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.butonTuruncuNitro_MouseDown);
+            this.butonTuruncuNitro.Text = "Turuncu Turbo";
+            this.butonTuruncuNitro.UseVisualStyleBackColor = true;
+            this.butonTuruncuNitro.Click += new System.EventHandler(this.button7_Click);
             // 
             // butonYesilNitro
             // 
-            this.butonYesilNitro.BackColor = System.Drawing.Color.Transparent;
-            this.butonYesilNitro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butonYesilNitro.BackgroundImage")));
-            this.butonYesilNitro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butonYesilNitro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butonYesilNitro.Location = new System.Drawing.Point(499, 573);
             this.butonYesilNitro.Name = "butonYesilNitro";
             this.butonYesilNitro.Size = new System.Drawing.Size(163, 80);
             this.butonYesilNitro.TabIndex = 12;
-            this.butonYesilNitro.UseVisualStyleBackColor = false;
-            this.butonYesilNitro.Click += new System.EventHandler(this.butonYesilNitro_Click);
-            this.butonYesilNitro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.butonYesilNitro_MouseDown);
+            this.butonYesilNitro.Text = "Yeşil Turbo";
+            this.butonYesilNitro.UseVisualStyleBackColor = true;
+            this.butonYesilNitro.Click += new System.EventHandler(this.button8_Click);
             // 
             // butonMaviTurbo
             // 
-            this.butonMaviTurbo.BackColor = System.Drawing.Color.Transparent;
-            this.butonMaviTurbo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butonMaviTurbo.BackgroundImage")));
-            this.butonMaviTurbo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butonMaviTurbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butonMaviTurbo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.butonMaviTurbo.Location = new System.Drawing.Point(668, 573);
             this.butonMaviTurbo.Name = "butonMaviTurbo";
             this.butonMaviTurbo.Size = new System.Drawing.Size(163, 80);
             this.butonMaviTurbo.TabIndex = 13;
-            this.butonMaviTurbo.UseVisualStyleBackColor = false;
-            this.butonMaviTurbo.Click += new System.EventHandler(this.butonMaviTurbo_Click);
-            this.butonMaviTurbo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.butonMaviTurbo_MouseDown);
+            this.butonMaviTurbo.Text = "Mavi Turbo";
+            this.butonMaviTurbo.UseVisualStyleBackColor = true;
+            this.butonMaviTurbo.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(1211, 573);
+            this.button10.Location = new System.Drawing.Point(1170, 573);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(166, 80);
+            this.button10.Size = new System.Drawing.Size(91, 80);
             this.button10.TabIndex = 14;
-            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Text = "Bahis";
+            this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // label2
@@ -255,7 +240,6 @@
             this.turuncuNitroBar.Location = new System.Drawing.Point(330, 544);
             this.turuncuNitroBar.Name = "turuncuNitroBar";
             this.turuncuNitroBar.Size = new System.Drawing.Size(163, 23);
-            this.turuncuNitroBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.turuncuNitroBar.TabIndex = 16;
             // 
             // yesilNitroBar
@@ -263,7 +247,6 @@
             this.yesilNitroBar.Location = new System.Drawing.Point(499, 544);
             this.yesilNitroBar.Name = "yesilNitroBar";
             this.yesilNitroBar.Size = new System.Drawing.Size(163, 23);
-            this.yesilNitroBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.yesilNitroBar.TabIndex = 17;
             // 
             // maviNitroBar
@@ -271,8 +254,22 @@
             this.maviNitroBar.Location = new System.Drawing.Point(668, 544);
             this.maviNitroBar.Name = "maviNitroBar";
             this.maviNitroBar.Size = new System.Drawing.Size(163, 23);
-            this.maviNitroBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.maviNitroBar.TabIndex = 18;
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 50;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 50;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // timer4
+            // 
+            this.timer4.Interval = 50;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // timerTuruncu
             // 
@@ -288,28 +285,22 @@
             // 
             // button7
             // 
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.ForeColor = System.Drawing.Color.Transparent;
-            this.button7.Location = new System.Drawing.Point(1026, 573);
+            this.button7.Location = new System.Drawing.Point(985, 573);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(179, 80);
             this.button7.TabIndex = 19;
+            this.button7.Text = "Yarışı Yeniden Başlat";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Location = new System.Drawing.Point(837, 573);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(183, 80);
+            this.button8.Size = new System.Drawing.Size(142, 80);
             this.button8.TabIndex = 20;
-            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Text = "Ana Menüye Dön";
+            this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
             // button9
@@ -325,46 +316,12 @@
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click_1);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 150F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(286, 153);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 226);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "1";
-            this.label3.Visible = false;
-            // 
-            // timer5
-            // 
-            this.timer5.Interval = 1000;
-            this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
-            // 
-            // button11
-            // 
-            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.ForeColor = System.Drawing.Color.Transparent;
-            this.button11.Location = new System.Drawing.Point(1188, 12);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(179, 80);
-            this.button11.TabIndex = 23;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1468, 665);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -424,15 +381,15 @@
         public System.Windows.Forms.ProgressBar turuncuNitroBar;
         public System.Windows.Forms.ProgressBar yesilNitroBar;
         public System.Windows.Forms.ProgressBar maviNitroBar;
+        public System.Windows.Forms.Timer timer2;
+        public System.Windows.Forms.Timer timer3;
+        public System.Windows.Forms.Timer timer4;
         public System.Windows.Forms.Timer timerTuruncu;
         public System.Windows.Forms.Timer timerYesil;
         public System.Windows.Forms.Timer timerMavi;
         public System.Windows.Forms.Button button7;
         public System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Timer timer5;
-        public System.Windows.Forms.Button button11;
     }
 }
 
