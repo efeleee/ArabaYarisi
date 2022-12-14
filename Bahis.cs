@@ -23,7 +23,7 @@ namespace ArabaYarisi
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked == true)
+            if (radioButton1.Checked == true)//Classdaki seçilen araba değişkenini değiştirir.
             {
                 Class1.turuncusec = 1;
             }
@@ -60,7 +60,7 @@ namespace ArabaYarisi
         private void Bahis_FormClosed(object sender, FormClosedEventArgs e)
         {
             Form1 f1 = new Form1();
-            if(Class1.turuncusec == 1)
+            if(Class1.turuncusec == 1)//Yarış ekranındaki yazıyı değiştirir.
             {
                 f1.label2.Text = "Yatırdığınız Araba:" + "Turuncu\nYatırdığınız Miktar:" + Class1.butce +"\nAraba kazanırsa alacağınız miktar:" + Class1.butce * 2 + "₺";
                 f1.Controls.Clear();
@@ -85,15 +85,42 @@ namespace ArabaYarisi
             this.Hide();
         }
 
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)//Sadece sayı girişi.
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void Bahis_Deactivate(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            int a = Convert.ToInt32(textBox1.Text);
-            yatirilanpara = a;
-            label2.Text = "Miktar :" + b + "₺";
-            b = b - yatirilanpara;
-            label2.Text = "Miktar :" + b + "₺";
-            Class1.butce = yatirilanpara;
-            Class1.kalanpara = b;
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Boş Alan Bırakılamaz");
+            }
+            else if (radioButton1.Checked == false && radioButton2.Checked == false && radioButton3.Checked == false)
+            {
+                MessageBox.Show("Lütfen Araba Seçin");  
+            }
+            else if (a > b)
+            {
+                MessageBox.Show("Paranız Yeterli Değil");
+            }
+            else
+            {
+                int a = Convert.ToInt32(textBox1.Text);
+                yatirilanpara = a;
+                label2.Text = "Miktar :" + b + "₺";
+                b = b - yatirilanpara;
+                label2.Text = "Miktar :" + b + "₺";
+                Class1.butce = yatirilanpara;
+                Class1.kalanpara = b;
+                Class1.bahisbasma = 1;
+                button1.Enabled = false;
+            }
         }
 
         private void Bahis_Load(object sender, EventArgs e)
